@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -31,5 +33,10 @@ public class Product {
     @Temporal(TemporalType.TIMESTAMP)  //เก็บtimestamp เวลาและวันที่  ปัจจุบัน
     @CreationTimestamp
     private Date createdAt;
+
+    // คลาสที่ 2 14-01-65
+    @ManyToOne
+    @JoinColumn(name = "categoryId", nullable =false)
+    private Category category;   //ไปหาเอาในไฟล์
 
 }

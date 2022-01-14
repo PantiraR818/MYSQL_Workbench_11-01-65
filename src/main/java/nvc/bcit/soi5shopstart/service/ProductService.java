@@ -19,4 +19,19 @@ public class ProductService {
     public Product getById(int id){
         return productRepository.getById(id);
     }
+
+//  Get Product by Name     คลาส2 14-01-65
+    public List<Product> findByName(String name){
+        return productRepository.findByNameContaining(name);
+    }
+
+//  Get Product by Price
+    public List<Product> findByPrice(double price){
+        return productRepository.findByPriceLessThanEqual(price);
+    }
+
+    //  Get Product by Price
+    public List<Product> findByUnit(Integer unitInStock){
+        return productRepository.findByunitInStockGreaterThanEqual(unitInStock);
+      }
 }
