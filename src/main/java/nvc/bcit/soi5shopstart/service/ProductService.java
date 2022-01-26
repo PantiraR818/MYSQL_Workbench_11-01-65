@@ -34,4 +34,13 @@ public class ProductService {
     public List<Product> findByUnit(Integer unitInStock){
         return productRepository.findByunitInStockGreaterThanEqual(unitInStock);
       }
+      
+    //   =======================class 3 21-1-65======================
+    public Product save(Product product){
+        return productRepository.save(product);
+    }
+
+    public void delete(Product product){
+        productRepository.delete(product);
+    }
 }

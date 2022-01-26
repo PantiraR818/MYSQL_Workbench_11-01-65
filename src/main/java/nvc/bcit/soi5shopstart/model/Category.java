@@ -26,5 +26,13 @@ public class Category {
 
     @OneToMany(mappedBy = "category")
     List<Product> products;  //เป็นการใส่เพื่อบอกว่า จะไปทางไหน ของList
+
+    public int getUnitInStock() {
+        return 0;
+    }
+
+    public Category getCategory() {
+        return null;
+    }
     
 }
